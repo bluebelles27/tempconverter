@@ -1,20 +1,70 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8"/>
     <title>JavaScript Temperature Converter</title>
-    <script src="convert.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/convert.js"></script>
 </head>
-<body>
+<body id="page-top" class="index">
+<div class="wrapper">
+
+<!-- Celsius to Fahrenheit and back borrowed and modified from http://www.w3schools.com/js/tryit.asp?filename=tryjs_celsius -->
 <h1>Temperature Conversion</h1>
-<body>
+
 <p>Insert a number into one of the input fields below:</p>
+
+<div class="converters">
+<h3>Convert from Celsius to Fahrenheit</h3>
 <input id="c" onkeyup="convert('C')"> degrees Celsius<br>
 equals<br>
-<input id="f" onkeyup="convert('F')"> degrees Fahrenheit
+<input id="f" onkeyup="convert('F')"> degrees Fahrenheit<br>
 
+<!-- C to K -->
+<br>
+<h3>Convert from Celsius to Kelvin</h3>
+<input id="cToK" onkeyup="convert2('C2')"> degrees Celsius<br>
+equals<br>
+<input id="kToC" onkeyup="convert2('K')"> degrees Kelvin<br>
+
+<!-- F to K -->
+<br>
+<h3>Convert from Fahrenheit to Kelvin</h3>
+<input id="fToK" onkeyup="convert3('F2')"> degrees Fahrenheit<br>
+equals<br>
+<input id="kToF" onkeyup="convert3('K2')"> degrees Kelvin<br>
+</div>
+    <br><br><br>
 <p>Note that the <b>Math.round()</b> method is used, so that the result will be returned as an integer.</p>
-</body>
+</div>
 </body>
 </html>
