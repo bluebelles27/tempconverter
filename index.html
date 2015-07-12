@@ -13,7 +13,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -36,35 +36,148 @@
     <script src="js/convert.js"></script>
 </head>
 <body id="page-top" class="index">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://lamp.cse.fau.edu/~eknapp2015/">Erin Knapp</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#temp">Temperature</a>
+                </li>
+                <li>
+                    <a href="#length">Length</a>
+                </li>
+                <li>
+                    <a href="#mass">Mass</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="wrapper">
-
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h2>Super Conversion Fun Time!</h2>
+            </div>
+        </div>
+    </header>
 <!-- Celsius to Fahrenheit and back borrowed and modified from http://www.w3schools.com/js/tryit.asp?filename=tryjs_celsius -->
 <h1>Temperature Conversion</h1>
+    <div class="container">
+        <hr class="divider" id = "temperature">
+        <!-- Temperature Buttons -->
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Convert From" id="temp1">
+                <div class="input-group-btn">
+                    <div class=dropdown">
+                        <select id="tempunits1" class="selector">
+                            <option>Celsius</option>
+                            <option>Fahrenheit</option>
+                            <option>Kelvin</option>
+                        </select>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
 
-<p>Insert a number into one of the input fields below:</p>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Convert To" id="temp2">
+                <div class="input-group-btn">
+                    <div class=dropdown">
+                        <select id="tempunits2" class="selector">
+                            <option>Celsius</option>
+                            <option>Fahrenheit</option>
+                            <option>Kelvin</option>
+                        </select>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
 
-<div class="converters">
-<h3>Convert from Celsius to Fahrenheit</h3>
-<input id="c" onkeyup="convert('C')"> degrees Celsius<br>
-equals<br>
-<input id="f" onkeyup="convert('F')"> degrees Fahrenheit<br>
 
-<!-- C to K -->
-<br>
-<h3>Convert from Celsius to Kelvin</h3>
-<input id="cToK" onkeyup="convert2('C2')"> degrees Celsius<br>
-equals<br>
-<input id="kToC" onkeyup="convert2('K')"> degrees Kelvin<br>
+<button class="btn btn-success" type="submit" onclick="convertTemperature()">Convert Time!</button>
 
-<!-- F to K -->
-<br>
-<h3>Convert from Fahrenheit to Kelvin</h3>
-<input id="fToK" onkeyup="convert3('F2')"> degrees Fahrenheit<br>
-equals<br>
-<input id="kToF" onkeyup="convert3('K2')"> degrees Kelvin<br>
-</div>
-    <br><br><br>
-<p>Note that the <b>Math.round()</b> method is used, so that the result will be returned as an integer.</p>
+<h1>Length Conversion</h1>
+<div class="container">
+    <hr class="divider" id = "length">
+    <!-- Length Buttons -->
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Convert From" id="length1">
+            <div class="input-group-btn">
+                <div class=dropdown">
+                    <select id="lengthunits1" class="selector">
+                        <option>Centimeters</option>
+                        <option>Inches</option>
+                        <option>Picas</option>
+                    </select>
+                </div><!-- /btn-group -->
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Convert To" id="length2">
+            <div class="input-group-btn">
+                <div class=dropdown">
+                    <select id="lengthunits2" class="selector">
+                        <option>Centimeters</option>
+                        <option>Inches</option>
+                        <option>Feet</option>
+                    </select>
+                </div><!-- /btn-group -->
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+<button class="btn btn-success" type="submit" onclick="convertLength()">Convert Time!</button>
+
+<h1>Mass Conversion</h1>
+<div class="container">
+    <hr class="divider" id = "mass">
+    <!-- Length Buttons -->
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Convert From" id="mass1">
+            <div class="input-group-btn">
+                <div class=dropdown">
+                    <select id="massunits1" class="selector">
+                        <option>Ounces</option>
+                        <option>Pounds</option>
+                        <option>Grams</option>
+                    </select>
+                </div><!-- /btn-group -->
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Convert To" id="mass2">
+            <div class="input-group-btn">
+                <div class=dropdown">
+                    <select id="massunits2" class="selector">
+                        <option>Ounces</option>
+                        <option>Pounds</option>
+                        <option>Grams</option>
+                    </select>
+                </div><!-- /btn-group -->
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+    <button class="btn btn-success" type="submit" onclick="convertMass()">Convert Time!</button>
+
 </div>
 </body>
 </html>
