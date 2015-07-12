@@ -70,116 +70,120 @@
             </div>
         </div>
     </header>
-<!-- Celsius to Fahrenheit and back borrowed and modified from http://www.w3schools.com/js/tryit.asp?filename=tryjs_celsius -->
+
     <hr class="divider" id = "temperature">
     <h1>Temperature Conversion</h1>
     <div class="container">
 
-        <!-- Temperature Buttons -->
-        <div class="col-lg-6">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Convert From" id="temp1">
-                <div class="input-group-btn">
-                    <div class=dropdown">
-                        <select id="tempunits1" class="selector">
-                            <option>Celsius</option>
-                            <option>Fahrenheit</option>
-                            <option>Kelvin</option>
-                        </select>
-                    </div><!-- /btn-group -->
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-
-        <div class="col-lg-6">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Convert To" id="temp2">
-                <div class="input-group-btn">
-                    <div class=dropdown">
-                        <select id="tempunits2" class="selector">
-                            <option>Celsius</option>
-                            <option>Fahrenheit</option>
-                            <option>Kelvin</option>
-                        </select>
-                    </div><!-- /btn-group -->
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
+<!-- Temperature Buttons -->
+<div class="col-sm-4">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Convert From" id="temp1">
+        <div class="input-group-btn">
+            <div class=dropdown">
+                <select id="tempunits1" class="selector">
+                    <option>Celsius</option>
+                    <option>Fahrenheit</option>
+                    <option>Kelvin</option>
+                </select>
+            </div><!-- /btn-group -->
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div>
 
 
-<button class="btn btn-success" type="submit" onclick="convertTemperature()">Convert Time!</button>
+<div class="col-sm-4">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Convert To" id="temp2">
+        <div class="input-group-btn">
+            <div class=dropdown">
+                <select id="tempunits2" class="selector">
+                    <option>Celsius</option>
+                    <option>Fahrenheit</option>
+                    <option>Kelvin</option>
+                </select>
+            </div><!-- /btn-group -->
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div>
+
+<div class="button"><button class="btn btn-success" type="submit" onclick="convertTemperature()">Convert Time!</button></div>
 
 <hr class="divider" id = "length">
 <h1>Length Conversion</h1>
 <div class="container">
+<!-- Length Buttons -->
+<div class="col-sm-4">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Convert From" id="length1">
+        <div class="input-group-btn">
+            <div class=dropdown">
+                <select id="lengthunits1" class="selector">
+                    <option>Centimeters</option>
+                    <option>Inches</option>
+                    <option>Picas</option>
+                </select>
+            </div><!-- /btn-group -->
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div>
 
-    <!-- Length Buttons -->
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Convert From" id="length1">
-            <div class="input-group-btn">
-                <div class=dropdown">
-                    <select id="lengthunits1" class="selector">
-                        <option>Centimeters</option>
-                        <option>Inches</option>
-                        <option>Picas</option>
-                    </select>
-                </div><!-- /btn-group -->
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
+<div class="col-sm-4">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Convert To" id="length2">
+        <div class="input-group-btn">
+            <div class=dropdown">
+                <select id="lengthunits2" class="selector">
+                    <option>Centimeters</option>
+                    <option>Inches</option>
+                    <option>Feet</option>
+                </select>
+            </div><!-- /btn-group -->
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div>
 
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Convert To" id="length2">
-            <div class="input-group-btn">
-                <div class=dropdown">
-                    <select id="lengthunits2" class="selector">
-                        <option>Centimeters</option>
-                        <option>Inches</option>
-                        <option>Feet</option>
-                    </select>
-                </div><!-- /btn-group -->
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
-<button class="btn btn-success" type="submit" onclick="convertLength()">Convert Time!</button>
+
+<div class="button"><button class="btn btn-success" type="submit" onclick="convertLength()">Convert Time!</button></div>
 
 <hr class="divider" id = "mass">
 <h1>Mass Conversion</h1>
 <div class="container">
-    <!-- Length Buttons -->
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Convert From" id="mass1">
-            <div class="input-group-btn">
-                <div class=dropdown">
-                    <select id="massunits1" class="selector">
-                        <option>Ounces</option>
-                        <option>Pounds</option>
-                        <option>Grams</option>
-                    </select>
-                </div><!-- /btn-group -->
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
+<!-- Length Buttons -->
+<div class="col-sm-4">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Convert From" id="mass1">
+        <div class="input-group-btn">
+            <div class=dropdown">
+                <select id="massunits1" class="selector">
+                    <option>Ounces</option>
+                    <option>Pounds</option>
+                    <option>Grams</option>
+                </select>
+            </div><!-- /btn-group -->
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div>
 
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Convert To" id="mass2">
-            <div class="input-group-btn">
-                <div class=dropdown">
-                    <select id="massunits2" class="selector">
-                        <option>Ounces</option>
-                        <option>Pounds</option>
-                        <option>Grams</option>
-                    </select>
-                </div><!-- /btn-group -->
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
-    <button class="btn btn-success" type="submit" onclick="convertMass()">Convert Time!</button>
+
+<div class="col-sm-4">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Convert To" id="mass2">
+        <div class="input-group-btn">
+            <div class=dropdown">
+                <select id="massunits2" class="selector">
+                    <option>Ounces</option>
+                    <option>Pounds</option>
+                    <option>Grams</option>
+                </select>
+            </div><!-- /btn-group -->
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div>
+
+<div class="button"><button class="btn btn-success" type="submit" onclick="convertMass()">Convert Time!</button></div>
 
 </div>
+    </div>
 </body>
 </html>
